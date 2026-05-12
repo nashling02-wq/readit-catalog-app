@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - clcm301-webapp
+name: Build and deploy ASP.Net Core app to Azure Web App - CLCM301-webapp
 
 on:
   push:
@@ -51,15 +51,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_98C84DC569D44BCAA22489E7C61C7FE0 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_CC64518340324F6284BB12783422BC82 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_0CE032AF2B8E471EB9C3A7915F0F716B }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_C78CA2842D8B497592DE2ABFC2916E2B }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_B4DD6456584A4EBA8BC032C6B582D3F5 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_3EB0C0C3D54A4FF2B3A23BBB336D36BE }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'clcm301-webapp'
+          app-name: 'CLCM301-webapp'
           slot-name: 'Production'
           package: .
           
